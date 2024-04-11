@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <style>
+
+        .add {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+            border: 3px solid black;
+            width: 85%;
+        }
+
+        table { 
+            border-collapse: collapse; 
+            border: 3px solid black;
+            width: 70vh;
+            
+        }
+
+
+        input {
+            height: 175px;
+        }
+
+
+        .add textarea::placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+       .small-area {
+        /* padding-top: 80px; */
+        width: 300px;
+        height: 175px;
+        line-height: 175px;
+        text-align: center;
+        box-sizing: border-box;
+
+       }
+
+       .large-area {
+        /* padding-top: 70px; */
+        width: 700px;
+        height: 175px;
+        text-align: center;
+        box-sizing: border-box;
+        line-height: 20px;
+
+       }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h2>Recipes</h2>
+    
+    <table class="table">
+
+    </table>
+
+    <h2>Add Recipe</h2>
+    <div class="add">
+    </div>
+
+    
+    <script src="./action.js"></script>
+</body>
+</html>
