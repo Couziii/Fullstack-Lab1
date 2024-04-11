@@ -1,6 +1,6 @@
 
 async function logRecipes() {
-    const response = await fetch("http://localhost:5000/api/recipes");
+    const response = await fetch("/api/recipes");
     const recipes = await response.json();
     return recipes;
     // console.log(recipes);
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     };
 
                     try {
-                        const response = await fetch(`http://localhost:5000/api/recipes/${id}`, {
+                        const response = await fetch(`/api/recipes/${id}`, {
                             // `http://localhost:5000/api/recipes${id}`
                             method: 'PUT',
                             headers: {
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 deleteButton.addEventListener("click", async () => {
                     console.log("Attempting to delete...")
                     try {
-                        const response = await fetch(`http://localhost:5000/api/recipes/${id}`, {
+                        const response = await fetch(`/api/recipes/${id}`, {
                             method: 'DELETE',
                             headers: {
                                 'Content-Type': 'application/json'
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
 
                     try {
-                        const response = fetch(`http://localhost:5000/api/recipes/`, {
+                        const response = fetch(`/api/recipes/`, {
                             method: "POST",
                             headers: {
                                 'Content-Type': 'application/json'
