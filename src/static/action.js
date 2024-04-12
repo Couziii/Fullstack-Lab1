@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     const newTitle = titleInput.value;
                     const newIngredients = ingredientsInput.value;
-                    const newInstructions = instructions.value;
+                    const newInstructions = instructionsInput.value;
                     const newCookingTime = cookingTimeInput.value;
 
                     const updatedData = {
