@@ -99,25 +99,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
 
                 deleteButton.addEventListener("click", async () => {
-                    console.log("Attempting to delete...")
-                    try {
-                        const response = await fetch(`/api/recipes/${id}`, {
-                            method: 'DELETE',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                        })
-                        
-                        if (response.ok) {
-                            console.log('Recipe deleted successfully');
-                            window.location.reload();
-                        } else {
-                            console.error("Failed to delete.")
-                        }
+                    const confirmed = window.confirm("Do you want to delete this recipe?");
 
-                    } catch (error) {
-                        console.error(error)
+                    if (confirmed) {
+                        console.log("Attempting to delete...")
+                        try {
+                            const response = await fetch(`/api/recipes/${id}`, {
+                                method: 'DELETE',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                            })
+                            
+                            if (response.ok) {
+                                console.log('Recipe deleted successfully');
+                                window.location.reload();
+                                alert("Recipe was deleted")
+                            } else {
+                                console.error("Failed to delete.")
+                            }
+    
+                        } catch (error) {
+                            console.error(error)
+                        }
                     }
+
 
                 })
             })
